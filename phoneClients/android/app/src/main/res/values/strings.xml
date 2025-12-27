@@ -25,6 +25,11 @@
     <string name="permission_rationale_background_location_pre_request">This app collects location data to enable tracking even when the app is closed or not in use. This requires the "Allow all the time" location permission. Please grant this on the next screen.</string>
     <string name="permission_denied_foreground_location">Foreground location permission denied. Tracking cannot start.</string>
     <string name="permission_denied_background_location">Background location permission denied. Tracking may stop when the app is closed.</string>
+    
+    <!-- Background Location Disclosure (Required by Google Play) -->
+    <string name="background_location_disclosure_title">Background Location Access</string>
+    <string name="background_location_disclosure_message">GPS Tracker needs to access your location in the background to continuously track your position even when the app is closed or minimized.\n\nThis location data is used to:\n• Track your real-time GPS coordinates\n• Calculate distance traveled\n• Upload location updates to your specified server\n\nYour location data is only sent to the website URL you specify and is not shared with third parties.\n\nDo you agree to allow background location access?</string>
+    <string name="background_location_required_message">Background location access is required for GPS tracking to work properly.</string>
     <string name="permission_button_grant">Grant</string>
     <string name="permission_button_deny">Deny</string>
     <string name="permission_button_settings">Settings</string>

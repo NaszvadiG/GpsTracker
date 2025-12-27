@@ -45,9 +45,11 @@ GPS Tracker consists of three main components:
 ### PHP/JS Server
 
 #### Requirements
-- PHP 7.4+
+
+- PHP 8.1+ (as of v7 – previous versions supported PHP 7.4)
 - MySQL, PostgreSQL, or SQLite database
 - Apache or Nginx web server
+- [Composer](https://getcomposer.org/download/) (for dependency management)
 
 #### Apache Installation
 
@@ -61,13 +63,25 @@ GPS Tracker consists of three main components:
    cp -r GpsTracker/servers/php/* /var/www/html/gpstracker/
    ```
 
-3. Set proper permissions:
+3. Install PHP dependencies using Composer:
+   ```bash
+   cd /var/www/html/gpstracker/
+   composer install --no-dev --optimize-autoloader
+   ```
+   
+   The `--no-dev` flag skips development dependencies (PHPUnit, PHPStan, etc.) for production. The `--optimize-autoloader` flag improves performance.
+   
+   > **If your hosting provider does not allow shell access or Composer:**
+   > 1. Run `composer install --no-dev` on your local machine in the project directory.
+   > 2. Upload the entire generated `vendor/` folder to your server along with the rest of the files.
+
+4. Set proper permissions:
    ```bash
    chmod -R 755 /var/www/html/gpstracker/
    chown -R www-data:www-data /var/www/html/gpstracker/
    ```
 
-4. Configure your environment settings:
+5. Configure your environment settings:
    ```bash
    # Copy the sample environment file
    cp .env.example .env
@@ -83,7 +97,7 @@ GPS Tracker consists of three main components:
    - Application settings like debug mode and timezone
    - Measurement units (miles/kilometers)
 
-5. Create the database schema:
+6. Create the database schema:
    - For SQLite: The database file will be created automatically in the `sqlite` directory
    - For MySQL/PostgreSQL: Create the database manually before running the application:
      ```sql
@@ -117,7 +131,7 @@ GPS Tracker consists of three main components:
 
 #### Nginx Installation
 
-1. Follow steps 1-4 from the Apache installation.
+1. Follow steps 1-5 from the Apache installation (including the Composer step).
 
 2. Add this to your Nginx server configuration:
    ```nginx
@@ -133,7 +147,7 @@ GPS Tracker consists of three main components:
 
        location ~ \.php$ {
            include snippets/fastcgi-php.conf;
-           fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+           fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
        }
 
        location ~ /\.ht {
@@ -147,11 +161,12 @@ GPS Tracker consists of three main components:
    sudo systemctl restart nginx
    ```
 
-4. Continue with step 5 from the Apache installation.
+4. Continue with step 6 from the Apache installation.
 
 ### Android Client
 
 #### Requirements
+
 - Android Studio 4.0+
 - Android SDK 21+
 
@@ -173,6 +188,7 @@ GPS Tracker consists of three main components:
 ### iOS Client
 
 #### Requirements
+
 - Xcode 16.2+
 - iOS 15.0+
 - Swift 5.8+

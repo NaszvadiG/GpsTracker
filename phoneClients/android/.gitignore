@@ -2,3 +2,9 @@
 /local.properties
 /.idea/workspace.xml
 .DS_Store
+
+# Keep credentials and builds out of repo
+secure/
+*.jks
+*.keystore
+app-release*.apk
