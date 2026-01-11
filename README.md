@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18215642.svg)](https://doi.org/10.5281/zenodo.18215642)
 # THE ORIGINAL GPS TRACKER v7.0.0
 
 ![GPS Tracker](https://raw.githubusercontent.com/nickfox/GpsTracker/master/gpstracker_small.png)
