@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Fox"
+  given-names: "Nick"
+  orcid: "https://orcid.org/0009-0007-5457-3030"
+title: "GpsTracker: The Most Popular Open Source GPS Tracking System"
+version: 7.0.0
+doi: 10.5281/zenodo.18215642
+date-released: 2026-01-11
+url: "https://github.com/nickfox/GpsTracker"
