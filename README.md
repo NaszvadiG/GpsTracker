@@ -3,7 +3,6 @@
 
 ![GPS Tracker](https://raw.githubusercontent.com/nickfox/GpsTracker/master/gpstracker_small.png)
 
-## The Most Popular Open Source GPS Tracking System
 *[Over 2.2 million downloads](https://sourceforge.net/projects/gpsmapper/files/stats/timeline?dates=2000-01-21+to+2025-04-21) • [800+ GitHub stars](https://github.com/nickfox/GpsTracker) • Active since 2007*
 
 GPS Tracker is a complete GPS tracking system that allows you to track mobile devices in real-time using Google or Open Street Maps and other map providers. This project has been actively maintained since 2007, with Version 7 representing a complete rewrite of the core components with modern code practices and frameworks.
